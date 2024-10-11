@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AgroTecNM</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script type="module" src="dashboard.js" defer></script>
+</head>
+<body>
+    <section id="sidebar">
+        <a href="index.html" class="brand">
+            <img src="assets/logo.png" alt="logo" class="logo">
+            <span>AgroTecNM</span>
+        </a>
+        <ul class="side-menu top">
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="content">
+        <nav>
+            <i class='bx bx-menu' ></i>
+            <span class="text">AgroTecNM</span>
+        </nav>
+
+        <main>
+            <div class="cards-container">
+                <div class="static-card">
+                    <h3 class="static-card-title">Datos Ambientales</h3>
+                    <p class="static-card-subtitle">Monitoreo en tiempo real</p>
+                    
+                    <!-- parametros -->
+                    <div class="parameters">
+                        <div class="parameter">
+                            <i class='bx bx-droplet'></i>
+                            <h2>45%</h2>
+                            <p>Humedad ambiental</p>
+                        </div>
+                        <div class="parameter">
+                            <i class='bx bxs-cloud-rain'></i>
+                            <h2>22°C</h2>
+                            <p>Temperatura ambiental</p>
+                        </div>
+                        <div class="parameter">
+                            <i class='bx bx-leaf'></i>
+                            <h2>30%</h2>
+                            <p>Humedad del suelo</p>
+                        </div>
+                    </div>
+                </div>
+
+            
+                <div class="card-row">
+                    <div class="card">
+                        <h3>Temperatura ambiental y humedad ambiental</h3>
+                        <p>Cambios a lo largo del tiempo
+                        </p>
+                        <canvas id="lineChart" style="height: 300px; width: 100%;"></canvas>
+                    </div>
+                    <div class="card">
+                        <h3>Humedad de suelo</h3>
+                        <p>Humedad en diferentes momentos</p>
+                        <canvas id="barChart" style="height: 300px; width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </section>
+</body>
+</html>
